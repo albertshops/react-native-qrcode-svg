@@ -4,7 +4,7 @@ export default (matrix, size) => {
   matrix.forEach((row, i) => {
     let needDraw = false
     row.forEach((column, j) => {
-      if (column) {
+      if (!column) {
         if (!needDraw) {
           path += `M${cellSize * j} ${cellSize / 2 + cellSize * i} `
           needDraw = true
